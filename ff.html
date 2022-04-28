@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='container01'>
+            <a href="subgar.html"></a><span class='text'></a>
+                <span> SION SECTER-1</span>
+            </span>
+        </div>
+
+
+
+
+        <div class='container11'>
+
+            <div class="gauge">
+                <div class="gauge__body">
+                    <div class="gauge__fill"></div>
+                    <div class="gauge__cover"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container12'>
+            <div class="gauge1">
+                <div class="gauge__body1">
+                    <div class="gauge__fill1"></div>
+                    <div class="gauge__cover1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container13'>
+            <div class="gauge2">
+                <div class="gauge__body2">
+                    <div class="gauge__fill2"></div>
+                    <div class="gauge__cover2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container14'>
+            <div class="gauge3">
+                <div class="gauge__body3">
+                    <div class="gauge__fill3"></div>
+                    <div class="gauge__cover3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container15'>
+            <div class="gauge4">
+                <div class="gauge__body4">
+                    <div class="gauge__fill4"></div>
+                    <div class="gauge__cover4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container16'>
+            <div class="gauge5">
+                <div class="gauge__body5">
+                    <div class="gauge__fill5"></div>
+                    <div class="gauge__cover5"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='Container17'>
+            <span class='text2'>view details</span>
+        </div>
+        <div class='Container18'>
+            <span class='text3'>view details</span>
+        </div>
+        <div class='Container19'>
+            <span class='text4'>view details</span>
+        </div>
+        <div class='Container20'>
+            <span class='text5'>view details</span>
+        </div>
+        <div class='Container21'>
+            <span class='text6'>view details</span>
+        </div>
+        <div class='Container22'>
+            <span class='text7'>view details</span>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAwCaRiZJ8ta9O1C_tdSWb4kgMAO4YPdns",
+            authDomain: "carpark1-eeeef.firebaseapp.com",
+            databaseURL: "https://carpark1-eeeef.firebaseio.com",
+            projectId: "carpark1-eeeef",
+            storageBucket: "carpark1-eeeef.appspot.com",
+            messagingSenderId: "18134759599",
+            appId: "1:18134759599:web:4bb625d28a94ef487c3c5a"
+        };
+        firebase.initializeApp(config);
+
+        /* Data Event Listeners Start */
+
+        //Data Object Change Listener
+        // const preObject = document.getElementById('bat');
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+        /* Stop */
+        
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus2');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill2").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover2").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus3');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill3").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover3").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus4');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill4").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover4").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus5');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill5").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover5").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+
+        (function () {
+            const dbRefObject = firebase.database().ref().child('ledStatus1');
+
+            dbRefObject.on('value', snap => {
+
+
+                console.log(snap.val());
+                if (snap.val() > 100) {
+                    vat = 100 / 100
+                    console.log(vat);
+                }
+                else {
+                    vat = snap.val() / 100;
+                    console.log(vat);
+                }
+
+
+                document.querySelector(".gauge__fill1").style.transform = `rotate(${vat / 2
+                    }turn)`;
+                document.querySelector(".gauge__cover1").textContent = `${Math.round(
+                    vat * 100
+                )}%`;
+
+
+
+            }, function (error) {
+                // The fetch failed.
+                console.error(error);
+            });
+
+        }());
+
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
